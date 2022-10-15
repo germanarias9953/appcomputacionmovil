@@ -1,0 +1,31 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Yourcloset" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/principal</item>
+        <item name="colorPrimaryDark">@color/terciario</item>
+        <item name="colorAccent">@color/azul1</item>
+        <item name="materialButtonStyle">@style/StyleButton</item>
+        <item name="android:textViewStyle">@style/StyleTextView</item>
+        <item name="android:editTextBackground">@drawable/style_border_edittext</item>
+        <item name="android:textColorHint">@color/grayHint</item>
+        <item name="android:textColor">@color/grayHint</item>
+    </style>
+    <style name="splashScreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/principal</item>
+    </style>
+
+    <style name="StyleButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:background">@drawable/style_button</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="StyleButton2" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:background">@drawable/style_button_2</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="StyleTextView" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+</resources>

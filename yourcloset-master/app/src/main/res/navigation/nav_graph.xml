@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/locationFragment"
+        android:name="com.example.yourcloset.LocationFragment"
+        android:label="@string/encuentranos"
+        tools:layout="@layout/fragment_location" />
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.yourcloset.SignUpFragment"
+        android:label="@string/signup"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_signTelFragment"
+            app:destination="@id/signTelFragment" />
+        <action
+            android:id="@+id/action_signUpFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_signUpFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signTelFragment"
+        android:name="com.example.yourcloset.SignTelFragment"
+        android:label="@string/tlogintelefono"
+        tools:layout="@layout/fragment_sign_tel" >
+        <action
+            android:id="@+id/action_signTelFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/commentsFragment"
+        android:name="com.example.yourcloset.CommentFragment"
+        android:label="@string/comentarios"
+        tools:layout="@layout/fragment_comment" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.yourcloset.LoginFragment"
+        android:label="@string/login" >
+        <action
+            android:id="@+id/action_loginFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_signTelFragment"
+            app:destination="@id/signTelFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.yourcloset.HomeFragment"
+        android:label="@string/home" >
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_commentsFragment"
+            app:destination="@id/commentsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_locationFragment"
+            app:destination="@id/locationFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_scannerActivity"
+            app:destination="@id/scannerActivity" />
+        <action
+            android:id="@+id/action_homeFragment_to_productFragment"
+            app:destination="@id/productFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_redessociales"
+            app:destination="@id/redes_sociales" />
+    </fragment>
+    <activity
+        android:id="@+id/scannerActivity"
+        android:name="com.example.yourcloset.ScannerActivity"
+        android:label="@string/escanea"
+        tools:layout="@layout/activity_scanner" />
+    <fragment
+        android:id="@+id/productFragment"
+        android:name="com.example.yourcloset.ProductFragment"
+        android:label="@string/producto"
+        tools:layout="@layout/fragment_product" >
+        <action
+            android:id="@+id/action_productFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="com.example.yourcloset.ProductDetailFragment"
+        android:label="@string/detalles"
+        tools:layout="@layout/fragment_product_detail" >
+        <argument
+            android:name="productoId"
+            app:argType="integer" />
+        <argument
+            android:name="nombre"
+            app:argType="string" />
+        <argument
+            android:name="descripcion"
+            app:argType="string" />
+        <argument
+            android:name="precio"
+            app:argType="integer" />
+        <argument
+            android:name="inventario"
+            app:argType="integer" />
+        <argument
+            android:name="imagen"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_productDetailFragment_to_pedidosFragment"
+            app:destination="@id/pedidosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pedidosFragment"
+        android:name="com.example.yourcloset.PedidosFragment"
+        android:label="fragment_pedidos"
+        tools:layout="@layout/fragment_pedidos" >
+        <action
+            android:id="@+id/action_pedidosFragment_to_resumenCompra"
+            app:destination="@id/resumenCompra" />
+    </fragment>
+    <fragment
+        android:id="@+id/resumenCompra"
+        android:name="com.example.yourcloset.ResumenCompra"
+        android:label="Resumen de compra"
+        tools:layout="@layout/fragment_resumen_compra" >
+        <action
+            android:id="@+id/action_resumenCompra_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/redes_sociales"
+        android:name="com.example.yourcloset.Redes_sociales"
+        android:label="fragment_redes_sociales"
+        tools:layout="@layout/fragment_redes_sociales" />
+</navigation>

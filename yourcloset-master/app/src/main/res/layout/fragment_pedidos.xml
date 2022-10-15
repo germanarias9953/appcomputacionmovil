@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PedidosFragment">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="293dp"
+        android:layout_height="26dp"
+        android:text="Carrito>Informacion>Envio>Pago"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="33dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="211dp"
+        android:layout_height="18dp"
+        android:text="Informacion de Contacto"
+        tools:layout_editor_absoluteX="53dp"
+        tools:layout_editor_absoluteY="87dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editCorreoelectronico"
+        android:layout_width="335dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="time"
+        android:text="Correo electronico"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="105dp" />
+
+    <EditText
+        android:id="@+id/editNombre"
+        android:layout_width="335dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="time"
+        android:text="Nombre"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="159dp" />
+
+    <EditText
+        android:id="@+id/editApellido"
+        android:layout_width="335dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="time"
+        android:text="Apellido"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="212dp" />
+
+    <EditText
+        android:id="@+id/editDireccion"
+        android:layout_width="335dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="time"
+        android:text="Direccion"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="267dp" />
+
+    <EditText
+        android:id="@+id/editApartamentoCasaLocal"
+        android:layout_width="335dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="time"
+        android:text="Apartamento, Casa, Local(opcional)"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="317dp" />
+
+    <EditText
+        android:id="@+id/editCiudad"
+        android:layout_width="335dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="time"
+        android:text="Ciudad"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="369dp" />
+
+    <EditText
+        android:id="@+id/editPaisRegion"
+        android:layout_width="335dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="time"
+        android:text="Pais/Region"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="420dp" />
+
+    <EditText
+        android:id="@+id/editProvinciaDepartamento"
+        android:layout_width="335dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="time"
+        android:text="Provincia/Departamento"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="471dp" />
+
+    <EditText
+        android:id="@+id/editNumeroDeIdentificacion"
+        android:layout_width="335dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="time"
+        android:text="Numero de Identificacion"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="521dp" />
+
+    <EditText
+        android:id="@+id/editTelefonocelular"
+        android:layout_width="335dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="time"
+        android:text="Telefono/Celular"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="576dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="278dp"
+        android:layout_height="46dp"
+        android:text="Continuar con envio"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="77dp"
+        tools:layout_editor_absoluteY="647dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpFragment">
+
+    <LinearLayout
+        android:id="@+id/frameSignEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/frameEstasRegistrado"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/title_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/creacuenta"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/frameSignEmail" />
+
+        <EditText
+            android:id="@+id/signEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:ems="10"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_sign_up" />
+
+        <EditText
+            android:id="@+id/signPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:ems="10"
+            android:hint="@string/contrasena"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/signEmail" />
+
+        <EditText
+            android:id="@+id/signPassword2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:ems="10"
+            android:hint="@string/confirmecontrasena"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/signPassword" />
+
+        <Button
+            android:id="@+id/btnRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/registrarse"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/signPassword2" />
+
+        <TextView
+            android:id="@+id/linkSignUpTel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:minHeight="48dp"
+            android:onClick="onClick"
+            android:text="@string/ingresonumero"
+            android:textSize="18sp"
+            android:textColor="@color/azul2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnRegistro" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/frameEstasRegistrado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameSignEmail">
+
+        <TextView
+            android:id="@+id/estasRegistrado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/estasregistrado"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/linkEstasRegistrado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:minHeight="48dp"
+            android:onClick="onClick"
+            android:text="@string/iniciasesion"
+            android:textSize="18sp"
+            android:textColor="@color/azul2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/estasRegistrado" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

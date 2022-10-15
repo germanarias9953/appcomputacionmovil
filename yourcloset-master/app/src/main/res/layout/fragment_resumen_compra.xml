@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ResumenCompra">
+
+    <TextView
+        android:id="@+id/tv_resumen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_resumen"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TableLayout
+        android:id="@+id/table_resumen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_resumen"
+        android:layout_marginBottom="50dp"
+        android:layout_centerHorizontal="true">
+
+        <TableRow android:id="@+id/titles">
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_weight="1"
+                android:layout_span="2"
+                android:text="@string/producto"
+                android:textColor="@color/azul1"/>
+
+            <TextView
+                android:id="@+id/tv_v_total"
+                android:layout_weight="1"
+                android:text="@string/precio"
+                android:textColor="@color/azul1"
+                android:textAlignment="center"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_weight="1"
+                android:layout_span="2"
+                android:text="@string/total"
+                android:textColor="@color/azul1"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/total_compra_resumen"
+                android:layout_weight="1"
+                android:text="0"
+                android:textColor="@color/azul1"
+                android:textStyle="bold"
+                android:textAlignment="textEnd"/>
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/tv_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nombre"
+        android:textStyle="bold"
+        android:layout_below="@id/table_resumen"
+        android:layout_alignParentStart="true"/>
+    <TextView
+        android:id="@+id/nombre_resumen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Juanito Perez"
+        android:textAlignment="textEnd"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/tv_nombre"
+        android:layout_below="@id/table_resumen"
+        />
+    <TextView
+        android:id="@+id/tv_pedido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pedido_numer"
+        android:textStyle="bold"
+        android:layout_below="@id/tv_nombre"
+        android:layout_alignParentStart="true"/>
+    <TextView
+        android:id="@+id/pedido_resumen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1234567890"
+        android:textAlignment="textEnd"
+        android:layout_below="@id/nombre_resumen"
+        android:layout_toEndOf="@id/tv_pedido"
+        android:layout_alignParentEnd="true"
+        />
+
+    <Button
+        android:id="@+id/exit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/exit"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/pedido_resumen"
+        android:layout_marginVertical="32dp"/>
+</RelativeLayout>

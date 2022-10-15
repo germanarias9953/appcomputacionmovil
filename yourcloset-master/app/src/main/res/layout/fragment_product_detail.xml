@@ -1,0 +1,145 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginStart="35dp"
+    android:layout_marginEnd="35dp"
+    android:layout_marginBottom="20dp"
+    tools:context=".ProductDetailFragment">
+
+    <data>
+        <variable
+            name="producto"
+            type="com.example.yourcloset.models.Producto" />
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imagenproducto"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:contentDescription="@{producto.nombre}"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@drawable/ic_product"
+                android:layout_marginTop="20dp"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/nombreproducto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@{producto.nombre}"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imagenproducto" />
+
+            <TextView
+                android:id="@+id/preciotitle"
+                android:layout_marginTop="20dp"
+                android:textColor="#1E529C"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/precio"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/nombreproducto"/>
+
+
+            <TextView
+                android:id="@+id/precio"
+                android:layout_marginTop="20dp"
+                android:textColor="#333333"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{@string/numeroprecio(producto.precio)}"
+                app:layout_constraintLeft_toRightOf="@id/preciotitle"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/nombreproducto"/>
+
+            <TextView
+                android:id="@+id/detalletitle"
+                android:layout_marginTop="25dp"
+                android:textColor="#333333"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/detallesproducto"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/precio"/>
+
+            <TextView
+                android:id="@+id/descripcion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:text="@{producto.descripcion}"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detalletitle" />
+
+            <TextView
+                android:id="@+id/unidadestitle"
+                android:layout_marginTop="15dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/unidadesdisponibles"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/descripcion"/>
+
+            <TextView
+                android:id="@+id/unidades"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{@string/numeroinventario(producto.inventario)}"
+                app:layout_constraintLeft_toRightOf="@id/unidadestitle"
+                app:layout_constraintTop_toBottomOf="@id/descripcion"/>
+
+            <Button
+                android:id="@+id/btnBuy"
+                android:background="@drawable/style_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:text="@string/btncomprar"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/unidades"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

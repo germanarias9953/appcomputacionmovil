@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".CommentFragment">
+
+    <LinearLayout
+        android:id="@+id/item1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/item_cover_iv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="nombre usuario"
+            android:visibility="visible"
+            android:src="@drawable/ic_user"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="50dp"
+                android:text="El mejor usuario"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/textComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="La mejor aplicación del mundo"
+                android:textSize="16sp" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="numero de estrellas" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/item1">
+
+
+        <ImageView
+            android:id="@+id/item_cover_ii"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@{comment.userName}"
+            android:visibility="visible"
+            android:src="@drawable/ic_user" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textUserName2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="50dp"
+                android:text="El mejor usuario"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/textComment2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="La mejor aplicación del mundo"
+                android:textSize="16sp" />
+
+            <RatingBar
+                android:id="@+id/ratingBar2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="numero de estrellas" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

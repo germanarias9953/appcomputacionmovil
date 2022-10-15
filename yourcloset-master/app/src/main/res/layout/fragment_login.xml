@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LoginFragment"
+    android:layout_margin="10dp">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/app_name"
+        android:visibility="visible"
+        android:src="@drawable/logo"
+        tools:visibility="visible" />
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tiniciasesion"/>
+
+    <EditText
+        android:background="@drawable/style_border_edittext"
+        android:id="@+id/txtUser"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="@string/inserteemail"
+        android:minHeight="48dp"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:background="@drawable/style_border_edittext"
+        android:id="@+id/txtPassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="@string/insertecontrasena"
+        android:minHeight="48dp"
+        android:layout_marginTop="20dp"
+        android:inputType="textPassword" />
+
+    <Button
+        android:background="@drawable/style_button"
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/biniciasesion" />
+
+    <Button
+        android:id="@+id/goSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/registrarse"
+        android:layout_marginTop="20dp"
+        style="@style/StyleButton2"/>
+
+    <TextView
+        android:id="@+id/loginTel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:clickable="true"
+        android:minHeight="48dp"
+        android:textSize="18sp"
+        android:textColor="@color/azul2"
+        android:text="@string/ingresonumero" />
+
+</LinearLayout>

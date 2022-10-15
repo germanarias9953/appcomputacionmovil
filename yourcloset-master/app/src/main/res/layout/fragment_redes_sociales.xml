@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Redes_sociales">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/Titulo_redes"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:text="Nuestras redes sociales"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/buttonFacebook"
+        android:layout_width="100dp"
+        android:layout_height="140dp"
+        android:layout_below="@+id/buttonShare"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/facebook"
+        android:translationX="400px"
+        android:translationY="200px" />
+
+    <Button
+        android:id="@+id/buttoninstagram"
+        android:layout_width="100dp"
+        android:layout_height="140dp"
+        android:layout_alignTop="@+id/buttonFacebook"
+        android:layout_toStartOf="@+id/buttonShare"
+        android:layout_toLeftOf="@+id/buttonShare"
+        android:background="@drawable/ic_instagram"
+        android:translationX="400px"
+        android:translationY="1400px" />
+
+    <Button
+        android:id="@+id/buttonwhatsapp"
+        android:layout_width="100dp"
+        android:layout_height="146dp"
+        android:layout_alignTop="@+id/buttonFacebook"
+        android:layout_toEndOf="@+id/buttonShare"
+        android:layout_toRightOf="@+id/buttonShare"
+        android:background="@drawable/whatsapp"
+        android:translationX="400px"
+        android:translationY="800px" />
+
+</FrameLayout>
